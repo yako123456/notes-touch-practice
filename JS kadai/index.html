@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>落ち物ゲー</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>落ち物ゲー</h1>
+    <p>Pキーで停止</p>
+    <canvas id="gameCanvas" style="display:none;"></canvas>
+
+    <div id="startScreen">
+        <h2>スペースキーまたは下のボタンでスタート！</h2>
+        <form id="configForm" style="margin-bottom: 20px;">
+            <div>
+                <label>反応するキー（カンマ区切り アルファベットのみ）: </label>
+                <input type="text" id="keyConfig" value="D,F,J,K" />
+            </div>
+            <div>
+                <label>落下速度: </label>
+                <input type="number" id="speedConfig" value="3" min="1" max="20" />
+            </div>
+            <div>
+                <label>落下間隔（ms）: </label>
+                <input type="number" id="intervalConfig" value="200" min="50" max="2000" />
+            </div>
+            <div>
+                <label>クリアスコア: </label>
+                <input type="number" id="clearScoreConfig" value="100" min="1" max="10000" />
+            </div>
+        </form>
+        <button id="startBtn">スタート</button>
+    </div>
+
+    <div id="pauseMenu" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:20; justify-content:center; align-items:center; flex-direction:column; text-align:center;">
+        <h2>一時停止中</h2>
+        <button id="resumeBtn">ゲーム再開</button>
+        <button id="restartBtn">最初から</button>
+        <button id="backToStartBtn">スタート画面に戻る</button>
+    </div>
+</body>
+</html>
