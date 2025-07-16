@@ -448,7 +448,7 @@ function createStatsChart() {
     chartCanvas.width = 400;
     chartCanvas.height = 200;
     chartCanvas.style.position = 'absolute';
-    chartCanvas.style.bottom = '20px';
+    chartCanvas.style.bottom = '50px';
     chartCanvas.style.left = '50%';
     chartCanvas.style.transform = 'translateX(-50%)';
     chartCanvas.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
